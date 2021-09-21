@@ -1,11 +1,11 @@
 'use strict';
 class UI {
   constructor(domImg, domCim, domAltCim, domDescription, domPrize) {
-    domImg = document.getElementsByName("img").src;
+    domImg = document.querySelector(".img");
     domCim = document.querySelector(".name");
-    domAltCim = document.getElementsByClassName("altName");
-    domDescription = document.getElementsByClassName("description");
-    domPrize = document.getElementsByClassName("prize");
+    domAltCim = document.querySelector("altName");
+    domDescription = document.querySelector("description");
+    domPrize = document.querySelector("prize");
     this.kep = domImg;
     this.cim = domCim;
     this.altCim = domAltCim;
@@ -14,10 +14,10 @@ class UI {
   }
 }
 class productInfo extends UI {
-  constructor(cim, productName) {
+  constructor(cim) {
     super(cim);
     this.productPicture = "/CodeBerryWebShop/assets/discatcher.jpg";
-    productName = "DisCatcher Target";
+    this.productName = "DisCatcher Target";
     this.productAltName = "Discgolf";
     this.productDescription = "DisCatcher Target a chain grid that catches fast and slow putts, heavy and light discs like no other target.";
     this.productPrize = "399";
@@ -25,6 +25,7 @@ class productInfo extends UI {
   }
   feel() {
     this.cim.innerHTML = this.productName;
+
   }
 }
 const start = new productInfo();
