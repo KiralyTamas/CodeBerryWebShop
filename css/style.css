@@ -26,6 +26,7 @@ body {
 	margin: auto;
 }
 .name {
+    font-family: PoppinN;
 	font-size: 2rem;
 	font-weight: 900;
 	margin-top: 1.5rem;
@@ -38,6 +39,9 @@ body {
 	font-size: 1.4rem;
 	margin-top: 1.5rem;
 	line-height: 2rem;
+}
+.altName,.description,.button{
+    font-family: PoppinD;
 }
 #buy {
 	display: flex;
@@ -60,6 +64,7 @@ body {
 	width: 50%;
 }
 .prize{
+font-family: poppinD;
   font-size: 2rem;
   font-weight: 900;
   margin-bottom: 1.5rem;
