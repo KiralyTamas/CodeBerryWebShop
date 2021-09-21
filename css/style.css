@@ -67,5 +67,14 @@ body {
 font-family: poppinD;
   font-size: 2rem;
   font-weight: 900;
-  margin-bottom: 1.5rem;
+  margin: 1.5rem 1.5rem 1.5rem 0;
+  padding: 10px 15px 10px 0;
+}
+.button{
+    font-size: 1rem;
+    margin: 1.5rem;
+    background-color: rgb(172, 240, 105);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 10px rgba(75, 75, 75, 0.1);
 }
