@@ -1,7 +1,7 @@
 'use strict';
 class UI {
     constructor(domImg, domCim, domAltCim, domDescription, domPrize) {
-        domImg = document.getElementById("picture").src;
+        domImg = document.querySelector(".picture");
         domCim = document.querySelector(".name");
         domAltCim = document.querySelector(".altName");
         domDescription = document.querySelector(".description");
@@ -24,7 +24,7 @@ class productInfo extends UI {
         this.euro = "€"
     }
     feel() {
-        this.kep = this.productPicture;
+        this.kep.src = this.productPicture; //Ha képet akarok beilleszteni, akkor a kép tag-ének az "src" attribútumára kell rámutatni.
         this.cim.innerHTML = this.productName;
         this.altCim.innerHTML = this.productAltName;
         this.description.innerHTML = this.productDescription;
