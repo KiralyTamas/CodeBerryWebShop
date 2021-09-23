@@ -1,6 +1,7 @@
 'use strict';
 class UI {
-    constructor(domImg, domCim, domAltCim, domDescription, domPrize) {
+    constructor(domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
+        domContener=document.querySelector("#contener");
         domImg = document.querySelector(".picture");
         domCim = document.querySelector(".name");
         domAltCim = document.querySelector(".altName");
