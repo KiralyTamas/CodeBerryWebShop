@@ -7,6 +7,8 @@ class UI {
         domAltCim = document.querySelector(".altName");
         domDescription = document.querySelector(".description");
         domPrize = document.querySelector(".prize");
+        this.contener=domContener;
+        this.klone=this.contener.cloneNode(true);
         this.kep = domImg;
         this.cim = domCim;
         this.altCim = domAltCim;
