@@ -17,8 +17,8 @@ class UI {
     }
 }
 class productInfo extends UI {
-    constructor(kep, cim, altCim, description, prize) {
-        super(kep, cim, altCim, description, prize);
+    constructor(klone, kep, cim, altCim, description, prize) {
+        super(klone, kep, cim, altCim, description, prize);
         this.productPicture = "/CodeBerryWebShop/assets/discatcher.jpg";
         this.productName = "DisCatcher Target";
         this.productAltName = "Discgolf";
