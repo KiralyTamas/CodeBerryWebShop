@@ -32,6 +32,7 @@ class productInfo extends UI {
         this.altCim.innerHTML = this.productAltName;
         this.description.innerHTML = this.productDescription;
         this.prize.innerHTML = this.euro + this.productPrize;
+        document.body.appendChild(this.klone);
     }
 }
 const start = new productInfo();
