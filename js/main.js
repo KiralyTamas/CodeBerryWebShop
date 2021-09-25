@@ -13,7 +13,7 @@ class UI {
         this.prize = domPrize;
     }
 }
-class productInfo extends UI {
+class productDisCacher extends UI {
     constructor(kep, cim, altCim, description, prize) {
         super(kep, cim, altCim, description, prize);
         this.productPicture = "/CodeBerryWebShop/assets/discatcher.jpg";
@@ -31,5 +31,5 @@ class productInfo extends UI {
         this.prize.innerHTML = this.euro + this.productPrize;
     }
 }
-const start = new productInfo();
+const start = new productDisCacher();
 start.feel();
