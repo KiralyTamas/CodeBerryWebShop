@@ -1,11 +1,14 @@
 'use strict';
 class UI {
-    constructor(domImg, domCim, domAltCim, domDescription, domPrize) {
+    constructor(domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
+        domContener=document.querySelector("#contener");
         domImg = document.querySelector(".picture");
         domCim = document.querySelector(".name");
         domAltCim = document.querySelector(".altName");
         domDescription = document.querySelector(".description");
         domPrize = document.querySelector(".prize");
+        this.contener=domContener;
+        this.klone=this.contener.cloneNode(true);
         this.kep = domImg;
         this.cim = domCim;
         this.altCim = domAltCim;
@@ -13,9 +16,9 @@ class UI {
         this.prize = domPrize;
     }
 }
-class productDisCacher extends UI {
-    constructor(kep, cim, altCim, description, prize) {
-        super(kep, cim, altCim, description, prize);
+class productInfo extends UI {
+    constructor(klone, kep, cim, altCim, description, prize) {
+        super(klone, kep, cim, altCim, description, prize);
         this.productPicture = "/CodeBerryWebShop/assets/discatcher.jpg";
         this.productName = "DisCatcher Target";
         this.productAltName = "Discgolf";
@@ -29,6 +32,7 @@ class productDisCacher extends UI {
         this.altCim.innerHTML = this.productAltName;
         this.description.innerHTML = this.productDescription;
         this.prize.innerHTML = this.euro + this.productPrize;
+        document.body.appendChild(this.klone);
     }
 }
 const start = new productDisCacher();
