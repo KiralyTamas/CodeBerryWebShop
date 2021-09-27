@@ -35,5 +35,5 @@ class productInfo extends UI {
         document.body.appendChild(this.klone);
     }
 }
-const start = new productDisCacher();
+const start = new productInfo();
 start.feel();
