@@ -13,16 +13,34 @@ class domCreate {
         cClassAltName.setAttribute("class","altName");
         cClassDescription=document.createElement("p");
         cClassDescription.setAttribute("class","description");
+        cIdBuy=document.createElement("div");
+        cIdBuy.setAttribute("id","buy");
+        cIdPrize=document.createElement("div");
+        cIdPrize.setAttribute("id","prize");
+        cClassPrize=document.createElement("h1");
+        cClassPrize.setAttribute("class","prize");
+        cIdButton=document.createElement("div");
+        cIdButton.setAttribute("id","button");
+        cClassButton=document.createElement("div");
+        cClassButton.setAttribute("class","button");
+        cClassButton.innerHTML="Add to cart";
         document.body.appendChild(cIdContener);
         cIdContener.appendChild(cClassImg);
         cIdContener.appendChild(cIdData);
         cIdData.appendChild(cClassName);
         cIdData.appendChild(cClassAltName);
         cIdData.appendChild(cClassDescription);
+        cIdContener.appendChild(cIdBuy);
+        cIdBuy.appendChild(cIdPrize);
+        cIdPrize.appendChild(cClassPrize);
+        cIdBuy.appendChild(cIdButton);
+        cIdButton.appendChild(cClassButton);
     }
 }
 const start2 = new domCreate();
 class UI {
+        cIdContener.appendChild(cIdBuy);
+        cIdBuy.appendChild(cIdPrize)
     constructor(domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
         domContener = document.querySelector("#contener");
         domImg = document.querySelector(".picture");
