@@ -39,15 +39,13 @@ class domCreate {
 }
 const start2 = new domCreate();
 class UI {
-        cIdContener.appendChild(cIdBuy);
-        cIdBuy.appendChild(cIdPrize)
     constructor(domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
-        domContener = document.querySelector("#contener");
-        domImg = document.querySelector(".picture");
-        domCim = document.querySelector(".name");
-        domAltCim = document.querySelector(".altName");
-        domDescription = document.querySelector(".description");
-        domPrize = document.querySelector(".prize");
+        domContener = document.querySelectorAll("#contener");
+        domImg = document.querySelectorAll(".picture");
+        domCim = document.querySelectorAll(".name");
+        domAltCim = document.querySelectorAll(".altName");
+        domDescription = document.querySelectorAll(".description");
+        domPrize = document.querySelectorAll(".prize");
         this.contener = domContener;
         this.kep = domImg;
         this.cim = domCim;
@@ -59,7 +57,7 @@ class UI {
 class productInfo extends UI {
     constructor(klone, kep, cim, altCim, description, prize) {
         super(klone, kep, cim, altCim, description, prize);
-        this.productPicture = "/CodeBerryWebShop/assets/discatcher.jpg";
+        this.productPicture = ["/CodeBerryWebShop/assets/discatcher.jpg","/CodeBerryWebShop/assets/dog.jpg"];
         this.productName = ["DisCatcher Target","Hero SuperAero"];
         this.productAltName = ["Discgolf","Discgolf"];
         this.productDescription = ["DisCatcher Target a chain grid that catches fast and slow putts, heavy and light discs like no other target.","a disc that floats like a butterfly, holds up like a SuperHero"];
