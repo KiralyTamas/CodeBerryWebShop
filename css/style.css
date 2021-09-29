@@ -19,10 +19,10 @@ body {
 }
 #contener img {
 	width: 100%;
-	height: 80vw;
+	height: 100%;
 }
 #data {
-	width: 85vw;
+	width: 85%;
 	margin: auto;
 }
 .name {
@@ -78,4 +78,17 @@ body {
 	padding: 10px 20px;
 	border-radius: 5px;
 	box-shadow: 0px 0px 10px 10px rgba(75, 75, 75, 0.1);
+}
+@media(min-width:430px){
+  #contener{
+    width: 35vw;
+  }
+  #buy{
+    width: 35vw;
+  }
+  .button{
+    font-size: 0.8rem;
+    padding: 5px 5px;
+    margin: 1rem;
+  }
 }
