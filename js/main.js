@@ -21,7 +21,7 @@ class productInfo extends UI {
     this.productPicture = ["/CodeBerryWebShop/assets/discatcher.jpg", "/CodeBerryWebShop/assets/dog.jpg"];
     this.productName = ["DisCatcher Target", "Hero SuperAero"];
     this.productAltName = ["Discgolf", "Discgolf"];
-    this.productDescription = ["DisCatcher Target a chain grid that catches fast and slow putts, heavy and light discs like no other target.", "a disc that floats like a butterfly, holds up like a SuperHero"];
+    this.productDescription = ["DisCatcher Target a chain grid that catches fast and slow putts, heavy and light discs like no other target.", "Hero SuperAero is a disc that floats like a butterfly, holds up like a SuperHero"];
     this.productPrize = ["399", "14"];
     this.euro = "€"
   }
