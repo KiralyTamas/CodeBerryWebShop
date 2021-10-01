@@ -19,6 +19,18 @@ body {
 	height: 5vh;
 	background-color: rgb(248, 107, 255);
 }
+svg{
+	display: inline;
+	width: inherit;
+	height: inherit;
+}
+#img{
+	display: block;
+	position: relative;
+	width: 25px;
+	height: 25px;
+	fill: rgba("lavender");
+}
 #contener {
 	display: block;
 	position: relative;
