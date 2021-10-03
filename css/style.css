@@ -1,24 +1,12 @@
-@font-face {
-	font-family: PoppinD;
-	src: url(/CodeBerryWebShop/Fonts/PoppinsD.ttf);
-}
-
-@font-face {
-	font-family: PoppinN;
-	src: url(/CodeBerryWebShop/Fonts/PoppinsN.ttf);
-}
-@font-face {
-	font-family: Pusab;
-	src: url(/CodeBerryWebShop/Fonts/Pusab.woff);
-}
-
 body {
 	display: block;
 	position: relative;
 }
 #head {
 	display: flex;
-	position: relative;
+	position: sticky;
+	top: 0px;
+	z-index: 999;
 	align-items: center;
 	width: 100vw;
 	height: 5vh;
@@ -33,12 +21,12 @@ body {
 	background-image: url(/CodeBerryWebShop/svg/store-solid.svg);
 	background-repeat: no-repeat;
 }
-.berry{
-font-family: Pusab;
-font-size: 3vw;
-color: white;
-letter-spacing: 0.2vw;
-padding-left: 0.5vw;
+.berry {
+	font-family: Pusab;
+	font-size: 3vw;
+	color: white;
+	letter-spacing: 0.2vw;
+	padding-left: 0.5vw;
 }
 #contener {
 	display: block;
@@ -129,7 +117,7 @@ padding-left: 0.5vw;
 		display: inline;
 		position: relative;
 		float: left;
-		width: 23vw;
+		width: 20vw;
 		margin: 15px 0 15px 15px;
 		transition: 500ms;
 	}
@@ -140,14 +128,14 @@ padding-left: 0.5vw;
 	}
 	.name {
 		transition: 500ms;
-		font-size: 1rem;
+		font-size: 1.2em;
 	}
 	.altName {
 		font-size: 1rem;
 	}
 	.description {
-		font-size: 0.7rem;
+		font-size: 0.9rem;
 		margin-top: 1.5rem;
-		line-height: 1.5rem;
+		line-height: 1rem;
 	}
 }
