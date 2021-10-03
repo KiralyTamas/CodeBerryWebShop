@@ -1,0 +1,27 @@
+@media (min-width: 768px) {
+	#contener {
+		display: inline;
+		position: relative;
+		float: left;
+		width: 20vw;
+		margin: 15px 0 15px 15px;
+		transition: 500ms;
+	}
+	.picture {
+		width: 100%;
+		height: 23vw;
+		transition: 500ms;
+	}
+	.name {
+		transition: 500ms;
+		font-size: 1.2em;
+	}
+	.altName {
+		font-size: 1rem;
+	}
+	.description {
+		font-size: 0.9rem;
+		margin-top: 1.5rem;
+		line-height: 1rem;
+	}
+}
