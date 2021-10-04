@@ -1,12 +1,14 @@
 'use strict';
 class UI {
-  constructor(domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
+  constructor(domContent, domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
+    domContent = document.querySelector("#content");
     domContener = document.querySelectorAll("#contener");
     domImg = document.querySelectorAll(".picture");
     domCim = document.querySelectorAll(".name");
     domAltCim = document.querySelectorAll(".altName");
     domDescription = document.querySelectorAll(".description");
     domPrize = document.querySelectorAll(".prize");
+    this.content = domContent;
     this.contener = domContener;
     this.kep = domImg;
     this.cim = domCim;
@@ -23,7 +25,7 @@ class productInfo extends UI {
     this.productAltName = ["Discgolf", "Discgolf"];
     this.productDescription = ["DisCatcher Target a chain grid that catches fast and slow putts, heavy and light discs like no other target.", "Hero SuperAero is a disc that floats like a butterfly, holds up like a SuperHero"];
     this.productPrize = ["399", "14"];
-    this.euro = "€"
+    this.euro = "€";
   }
   feel() {
     for (let i = 0; i < this.productName.length; i++) {
@@ -36,8 +38,8 @@ class productInfo extends UI {
   }
 }
 class domCreate extends productInfo {
-  constructor(arrayCount, productName, cIdContener, cClassImg, cIdData, cClassName, cClassAltName, cClassDescription, cIdBuy, cIdPrize, cClassPrize, cIdButton, cClassButton) {
-    super(productName)
+  constructor(arrayCount, productName, content, cIdContener, cClassImg, cIdData, cClassName, cClassAltName, cClassDescription, cIdBuy, cIdPrize, cClassPrize, cIdButton, cClassButton) {
+    super(productName, content)
     arrayCount = this.productName.length;
     for (let i = 0; i < arrayCount; i++) {
       cIdContener = document.createElement("div");
@@ -63,7 +65,7 @@ class domCreate extends productInfo {
       cClassButton = document.createElement("div");
       cClassButton.setAttribute("class", "button");
       cClassButton.innerHTML = "Add to cart";
-      document.body.appendChild(cIdContener);
+      this.content.appendChild(cIdContener);
       cIdContener.appendChild(cClassImg);
       cIdContener.appendChild(cIdData);
       cIdData.appendChild(cClassName);
