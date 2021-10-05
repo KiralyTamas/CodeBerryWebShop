@@ -40,10 +40,11 @@
 		position: relative;
 		top: 0px;
 		float: right;
-		/*margin-top: -4.2vh;*/
+		margin-top: -4.2vh;
 		margin-right: 1vh;
-		width: 20vh;
-		height: auto;
+		width:70px;
+		height: 55px;
+		overflow: hidden;
 		z-index: 2;
 		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.289);
 	}
@@ -59,8 +60,8 @@
 	.cartIcon {
 		display: block;
 		position: relative;
-		width: 4vh;
-		height: 4vh;
+		width: 100%;
+		height: 57px;
 		margin-left: 5px;
 		background-image: url(/CodeBerryWebShop/svg/cart-black.svg);
 		background-repeat: no-repeat;
@@ -68,7 +69,7 @@
 	.cartWord {
 		display: block;
 		position: relative;
-		width: 100%;
+		width: 00%;
 		font-size: 1.2rem;
 		margin-left: 1rem;
 	}
@@ -96,6 +97,12 @@
 	}
 	#cartContent h3{
 		font-family: PoppinD;
+	}
+	#cartContent:active{
+		transition: 1000ms;
+		margin-top: 0;
+		width: 20vh;
+		height: auto;
 	}
 	#contener {
 		display: block;
