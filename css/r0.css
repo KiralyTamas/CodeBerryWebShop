@@ -98,7 +98,7 @@
 	#cartContent h3{
 		font-family: PoppinD;
 	}
-	#cartContent:active{
+	#cartContent:hover{
 		transition: 1000ms;
 		margin-top: 0;
 		width: 20vh;
