@@ -1,7 +1,8 @@
 'use strict';
 class UI {
-  constructor(domDocument, domContent, domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
-    domDocument=document.body.clientWidth;
+  constructor(domCartContent, domDocument, domContent, domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
+    domDocument = document.body.clientWidth;
+    domCartContent = document.querySelector("#cartContent");
     domContent = document.querySelector("#content");
     domContener = document.querySelectorAll("#contener");
     domImg = document.querySelectorAll(".picture");
@@ -9,7 +10,8 @@ class UI {
     domAltCim = document.querySelectorAll(".altName");
     domDescription = document.querySelectorAll(".description");
     domPrize = document.querySelectorAll(".prize");
-    this.document=domDocument;
+    this.document = domDocument;
+    this.cartContent = domCartContent;
     this.content = domContent;
     this.contener = domContener;
     this.kep = domImg;
@@ -79,9 +81,16 @@ class domCreate extends productInfo {
       cIdPrize.appendChild(cClassPrize);
       cIdBuy.appendChild(cIdButton);
       cIdButton.appendChild(cClassButton);
-      console.log(this.document);
     }
   }
+  start() {
+    if (this.document < 768) {
+      this.cartContent.classList.toggle(".cartContentClick")
+    }
+  }
+  function(){
+    this.cartContent.addEventListener("click",start());
+    };
 }
 new domCreate();
 new productInfo().feel();
