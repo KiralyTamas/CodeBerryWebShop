@@ -1,6 +1,7 @@
 'use strict';
 class UI {
-  constructor(domContent, domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
+  constructor(domDocument, domContent, domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
+    domDocument=document.body.clientWidth;
     domContent = document.querySelector("#content");
     domContener = document.querySelectorAll("#contener");
     domImg = document.querySelectorAll(".picture");
@@ -8,6 +9,7 @@ class UI {
     domAltCim = document.querySelectorAll(".altName");
     domDescription = document.querySelectorAll(".description");
     domPrize = document.querySelectorAll(".prize");
+    this.document=domDocument;
     this.content = domContent;
     this.contener = domContener;
     this.kep = domImg;
@@ -17,9 +19,10 @@ class UI {
     this.prize = domPrize;
   }
 }
+
 class productInfo extends UI {
-  constructor(klone, kep, cim, altCim, description, prize) {
-    super(klone, kep, cim, altCim, description, prize);
+  constructor() {
+    super();
     this.productPicture = ["/CodeBerryWebShop/assets/discatcher.jpg", "/CodeBerryWebShop/assets/dog.jpg"];
     this.productName = ["DisCatcher Target", "Hero SuperAero"];
     this.productAltName = ["Discgolf", "Discgolf"];
@@ -38,8 +41,8 @@ class productInfo extends UI {
   }
 }
 class domCreate extends productInfo {
-  constructor(arrayCount, productName, content, cIdContener, cClassImg, cIdData, cClassName, cClassAltName, cClassDescription, cIdBuy, cIdPrize, cClassPrize, cIdButton, cClassButton) {
-    super(productName, content)
+  constructor(arrayCount, cIdContener, cClassImg, cIdData, cClassName, cClassAltName, cClassDescription, cIdBuy, cIdPrize, cClassPrize, cIdButton, cClassButton) {
+    super()
     arrayCount = this.productName.length;
     for (let i = 0; i < arrayCount; i++) {
       cIdContener = document.createElement("div");
@@ -76,6 +79,7 @@ class domCreate extends productInfo {
       cIdPrize.appendChild(cClassPrize);
       cIdBuy.appendChild(cIdButton);
       cIdButton.appendChild(cClassButton);
+      console.log(this.document);
     }
   }
 }
