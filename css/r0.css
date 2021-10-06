@@ -11,7 +11,7 @@
 		align-items: center;
 		width: 100vw;
 		height: 5vh;
-		background-color: rgb(255, 107, 184);
+		background-color: rgb(255, 72, 164);
 	}
 	.marketIcon {
 		display: inline-block;
@@ -42,16 +42,27 @@
 		float: right;
 		margin-top: -4.2vh;
 		margin-right: 1vh;
-		width:70px;
-		height: 55px;
+		width:15vh;
+		height: 30px;
 		overflow: hidden;
+		transition: 1000ms;
 		z-index: 2;
-		box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.289);
+	}
+	#cartContent:hover{
+		position: absolute;
+		right: 5px;
+		top:80px;
+		transition: 1000ms;
+		width: 20vh;
+		height: auto;
+		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
+		border: 1px solid rgba(0, 0, 0, 0.1);
+		border-radius: 15px;
+		background-color: white;
 	}
 	#cartHead {
 		display: flex;
 		position: relative;
-		justify-content: center;
 		align-items: center;
 		width: 100%;
 		height: auto;
@@ -60,16 +71,17 @@
 	.cartIcon {
 		display: block;
 		position: relative;
-		width: 100%;
-		height: 57px;
+		width: 4vh;
+		height: 4vh;
 		margin-left: 5px;
+		float: left;
 		background-image: url(/CodeBerryWebShop/svg/cart-black.svg);
 		background-repeat: no-repeat;
 	}
 	.cartWord {
-		display: block;
+		display: inline-block;
 		position: relative;
-		width: 00%;
+		width: 100%;
 		font-size: 1.2rem;
 		margin-left: 1rem;
 	}
@@ -97,12 +109,6 @@
 	}
 	#cartContent h3{
 		font-family: PoppinD;
-	}
-	#cartContent:hover{
-		transition: 1000ms;
-		margin-top: 0;
-		width: 20vh;
-		height: auto;
 	}
 	#contener {
 		display: block;

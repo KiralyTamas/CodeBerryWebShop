@@ -1,4 +1,15 @@
 @media (min-width: 768px) {
+	#cartContent{
+		margin-top: 5px;
+	}
+	#content{
+		width: 75vw;
+		height: 100vh;
+		margin-top: 5px;
+		border: 2px solid rgba(0, 0, 0, 0.1);
+		border-radius: 15px;
+		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+	}
 	#contener {
 		display: inline;
 		position: relative;
