@@ -1,8 +1,16 @@
-'use strict';
+"use strict";
 class UI {
-  constructor(domCartContent, domDocument, domContent, domContener, domImg, domCim, domAltCim, domDescription, domPrize) {
-    domDocument = document.body.clientWidth;
-    domCartContent = document.querySelector("#cartContent");
+  constructor(
+    domCartContent,
+    domContent,
+    domContener,
+    domImg,
+    domCim,
+    domAltCim,
+    domDescription,
+    domPrize
+  ) {
+    domCartContent = document.querySelector(".cartContent");
     domContent = document.querySelector("#content");
     domContener = document.querySelectorAll("#contener");
     domImg = document.querySelectorAll(".picture");
@@ -10,7 +18,6 @@ class UI {
     domAltCim = document.querySelectorAll(".altName");
     domDescription = document.querySelectorAll(".description");
     domPrize = document.querySelectorAll(".prize");
-    this.document = domDocument;
     this.cartContent = domCartContent;
     this.content = domContent;
     this.contener = domContener;
@@ -25,10 +32,16 @@ class UI {
 class productInfo extends UI {
   constructor() {
     super();
-    this.productPicture = ["/CodeBerryWebShop/assets/discatcher.jpg", "/CodeBerryWebShop/assets/dog.jpg"];
+    this.productPicture = [
+      "/CodeBerryWebShop/assets/discatcher.jpg",
+      "/CodeBerryWebShop/assets/dog.jpg",
+    ];
     this.productName = ["DisCatcher Target", "Hero SuperAero"];
     this.productAltName = ["Discgolf", "Discgolf"];
-    this.productDescription = ["DisCatcher Target a chain grid that catches fast and slow putts, heavy and light discs like no other target.", "Hero SuperAero is a disc that floats like a butterfly, holds up like a SuperHero"];
+    this.productDescription = [
+      "DisCatcher Target a chain grid that catches fast and slow putts, heavy and light discs like no other target.",
+      "Hero SuperAero is a disc that floats like a butterfly, holds up like a SuperHero",
+    ];
     this.productPrize = ["399", "14"];
     this.euro = "€";
   }
@@ -43,9 +56,21 @@ class productInfo extends UI {
   }
 }
 class domCreate extends productInfo {
-  constructor(arrayCount, cIdContener, cClassImg, cIdData, cClassName, cClassAltName, cClassDescription, cIdBuy, cIdPrize, cClassPrize, cIdButton, cClassButton)
-    super()
-    dom() {
+  constructor(
+    arrayCount,
+    cIdContener,
+    cClassImg,
+    cIdData,
+    cClassName,
+    cClassAltName,
+    cClassDescription,
+    cIdBuy,
+    cIdPrize,
+    cClassPrize,
+    cIdButton,
+    cClassButton
+  ) {
+    super();
     arrayCount = this.productName.length;
     for (let i = 0; i < arrayCount; i++) {
       cIdContener = document.createElement("div");
@@ -85,14 +110,14 @@ class domCreate extends productInfo {
     }
   }
   start() {
-    if (this.document < 768) {
-      this.cartContent.classList.toggle(".cartContentClick")
+    this.domDocument = document.body.clientWidth;
+    if (this.domDocument < 768) {
+      this.cartContent.classList.toggle("cartContentClick");
     }
   }
-  domListener(){
-    this.cartContent.addEventListener("click",start());
-    };
+  listener() {
+    this.cartContent.addEventListener("click", () => this.start());
+  }
 }
-new domCreate().dom();
+new domCreate().listener();
 new productInfo().feel();
-new domCreate().domListener();
