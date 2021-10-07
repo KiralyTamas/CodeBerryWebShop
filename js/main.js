@@ -106,7 +106,7 @@ class domCreate extends productInfo {
       cIdBuy.appendChild(cIdPrize);
       cIdPrize.appendChild(cClassPrize);
       cIdBuy.appendChild(cIdButton);
-      cIdButton.appendChild(cClassButton)
+      cIdButton.appendChild(cClassButton);
     }
   }
   start() {

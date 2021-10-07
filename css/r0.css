@@ -1,182 +1,185 @@
 @media (min-width: 0px) {
-	body {
-		display: block;
-		position: relative;
-	}
-	#head {
-		display: flex;
-		position: sticky;
-		top: 0px;
-		z-index: 1;
-		align-items: center;
-		width: 100vw;
-		height: 5vh;
-		background-color: rgb(255, 72, 164);
-	}
-	.marketIcon {
-		display: inline-block;
-		position: relative;
-		width: 4vw;
-		height: 60%;
-		margin-left: 0.5vw;
-		background-image: url(/CodeBerryWebShop/svg/store-solid.svg);
-		background-repeat: no-repeat;
-	}
-	.berry {
-		font-family: Pusab;
-		font-size: 3vw;
-		color: white;
-		letter-spacing: 0.2vw;
-		padding-left: 0.5vw;
-	}
-	#content {
-		display: block;
-		position: relative;
-		width: 100vw;
-		height: auto;
-	}
-	.cartContent {
-		display: block;
-		position: fixed;
-		top: 10px;
-		right:0px;
-		width:15vh;
-		height: 30px;
-		overflow: hidden;
-		transition: 1000ms;
-		z-index: 2;
-	}
-	.cartContentClick{
-		position: absolute;
-		right: 5px;
-		top:80px;
-		transition: 1000ms;
-		width: 20vh;
-		height: auto;
-		box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		border-radius: 15px;
-		background-color: white;
-	}
-	#cartHead {
-		display: flex;
-		position: relative;
-		align-items: center;
-		width: 100%;
-		height: auto;
-		margin-bottom: 1.5rem;
-	}
-	.cartIcon {
-		display: block;
-		position: relative;
-		width: 4vh;
-		height: 4vh;
-		margin-left: 5px;
-		float: left;
-		background-image: url(/CodeBerryWebShop/svg/cart-black.svg);
-		background-repeat: no-repeat;
-	}
-	.cartWord {
-		display: inline-block;
-		position: relative;
-		width: 100%;
-		font-size: 1.2rem;
-		margin-left: 1rem;
-	}
-	#cartData {
-		display: flex;
-		position: relative;
-		justify-content: center;
-		align-items: center;
-		margin-bottom: 1.5rem;
-	}
-	.itemName,.itemPrize{
-		margin: auto;
-	}
-	#checkButton {
-		display: block;
-		position: relative;
-		width: max-content;
-		margin: auto;
-		margin-bottom: 1.5rem;
-		border: 1px solid rgba(0, 0, 0, 0.1);
-		border-radius: 5px;
-	}
-	#checkButton h3{
-		margin: 10px 20px 10px 20px;
-	}
-	#cartContent h3{
-		font-family: PoppinD;
-	}
-	#contener {
-		display: block;
-		position: relative;
-		width: 95vw;
-		margin: auto;
-		box-shadow: 5px 5px 5px 5px rgba(75, 75, 75, 0.3);
-		transition: 500ms;
-	}
-	.picture {
-		width: 100%;
-		height: 100%;
-		transition: 500ms;
-	}
-	#data {
-		width: 92%;
-		margin: auto;
-		letter-spacing: 0.2px;
-	}
-	.name {
-		transition: 500ms;
-		font-family: PoppinN;
-		font-size: 2rem;
-		font-weight: 900;
-		margin-top: 1rem;
-	}
-	.altName {
-		font-size: 1.5rem;
-		margin-top: 0.8rem;
-	}
-	.description {
-		font-size: 1.4rem;
-		margin-top: 1rem;
-		line-height: 2rem;
-	}
-	.altName, .description, .button {
-		font-family: PoppinD;
-	}
-	#buy {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		width: 90%;
-		margin: 1rem auto;
-	}
-	#prize {
-		display: flex;
-		justify-content: left;
-		align-items: center;
-		width: 50%;
-	}
-	#button {
-		display: flex;
-		justify-content: right;
-		align-items: center;
-		width: 50%;
-	}
-	.prize {
-		font-family: poppinD;
-		font-size: 2rem;
-		font-weight: 900;
-		margin: 1.5rem 1.5rem 1.5rem 0;
-		padding: 10px 15px 10px 0;
-	}
-	.button {
-		font-size: 1rem;
-		margin: 1.5rem;
-		background-color: rgb(172, 240, 105);
-		padding: 10px 20px;
-		border-radius: 5px;
-		box-shadow: 0px 0px 10px 10px rgba(75, 75, 75, 0.1);
-	}
+  body {
+    display: block;
+    position: relative;
+  }
+  #head {
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+    align-items: center;
+    width: 100vw;
+    height: 5vh;
+    background-color: rgb(255, 72, 164);
+  }
+  .marketIcon {
+    display: inline-block;
+    position: relative;
+    width: 4vw;
+    height: 60%;
+    margin-left: 0.5vw;
+    background-image: url(/CodeBerryWebShop/svg/store-solid.svg);
+    background-repeat: no-repeat;
+  }
+  .berry {
+    font-family: Pusab;
+    font-size: 3vw;
+    color: white;
+    letter-spacing: 0.2vw;
+    padding-left: 0.5vw;
+  }
+  #content {
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: auto;
+  }
+  .cartContent {
+    display: block;
+    position: fixed;
+    top: 10px;
+    right: 0px;
+    width: 15vh;
+    height: 30px;
+    overflow: hidden;
+    transition: 1000ms;
+    z-index: 2;
+  }
+  .cartContentClick {
+    position: absolute;
+    right: 5px;
+    top: 80px;
+    transition: 1000ms;
+    width: 20vh;
+    height: auto;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: white;
+  }
+  #cartHead {
+    display: flex;
+    position: relative;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+  }
+  .cartIcon {
+    display: block;
+    position: relative;
+    width: 4vh;
+    height: 4vh;
+    margin-left: 5px;
+    float: left;
+    background-image: url(/CodeBerryWebShop/svg/cart-black.svg);
+    background-repeat: no-repeat;
+  }
+  .cartWord {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    font-size: 1.2rem;
+    margin-left: 1rem;
+  }
+  #cartData {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .itemName,
+  .itemPrize {
+    margin: auto;
+  }
+  #checkButton {
+    display: block;
+    position: relative;
+    width: max-content;
+    margin: auto;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+  }
+  #checkButton h3 {
+    margin: 10px 20px 10px 20px;
+  }
+  #cartContent h3 {
+    font-family: PoppinD;
+  }
+  #contener {
+    display: block;
+    position: relative;
+    width: 95vw;
+    margin: auto;
+    box-shadow: 5px 5px 5px 5px rgba(75, 75, 75, 0.3);
+    transition: 500ms;
+  }
+  .picture {
+    width: 100%;
+    height: 100%;
+    transition: 500ms;
+  }
+  #data {
+    width: 92%;
+    margin: auto;
+    letter-spacing: 0.2px;
+  }
+  .name {
+    transition: 500ms;
+    font-family: PoppinN;
+    font-size: 2rem;
+    font-weight: 900;
+    margin-top: 1rem;
+  }
+  .altName {
+    font-size: 1.5rem;
+    margin-top: 0.8rem;
+  }
+  .description {
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    line-height: 2rem;
+  }
+  .altName,
+  .description,
+  .button {
+    font-family: PoppinD;
+  }
+  #buy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 1rem auto;
+  }
+  #prize {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 50%;
+  }
+  #button {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 50%;
+  }
+  .prize {
+    font-family: poppinD;
+    font-size: 2rem;
+    font-weight: 900;
+    margin: 1.5rem 1.5rem 1.5rem 0;
+    padding: 10px 15px 10px 0;
+  }
+  .button {
+    font-size: 1rem;
+    margin: 1.5rem;
+    background-color: rgb(172, 240, 105);
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 10px rgba(75, 75, 75, 0.1);
+  }
 }
