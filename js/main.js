@@ -43,7 +43,7 @@ class productInfo extends UI {
   }
 }
 class domCreate extends productInfo {
-  constructor(arrayCount, cIdContener, cClassImg, cIdData, cClassName, cClassAltName, cClassDescription, cIdBuy, cIdPrize, cClassPrize, cIdButton, cClassButton) {
+  constructor(arrayCount, cIdContener, cClassImg, cIdData, cClassName, cClassAltName, cClassDescription, cIdBuy, cIdPrize, cClassPrize, cIdButton, cClassButton)
     super()
     dom() {
     arrayCount = this.productName.length;
@@ -81,8 +81,7 @@ class domCreate extends productInfo {
       cIdBuy.appendChild(cIdPrize);
       cIdPrize.appendChild(cClassPrize);
       cIdBuy.appendChild(cIdButton);
-      cIdButton.appendChild(cClassButton);
-    }
+      cIdButton.appendChild(cClassButton)
     }
   }
   start() {
