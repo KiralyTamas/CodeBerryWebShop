@@ -123,16 +123,19 @@ new domCreate().listener();
 new productInfo().feel();
 
 class Button extends UI {
-  constructor(button) {
+  constructor(cartbutton) {
     super();
-    button = document.querySelector("#checkButton");
-    this.button = button;
+    cartbutton = document.querySelectorAll(".button");
+    this.button = cartbutton;
   };
   print() {
-    console.log(this.button.length);
+    for (var i = 0; i < this.button.length; i++){
+    console.log(this.cim[i].innerHTML);}
   };
   list() {
-    this.button.addEventListener("click", this.print());
+    for (var i = 0; i < this.button.length; i++) {
+      this.button[i].addEventListener("click", ()=>this.print()); 
+    }
   }
 }
 new Button().list();
