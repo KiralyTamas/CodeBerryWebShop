@@ -121,3 +121,18 @@ class domCreate extends productInfo {
 }
 new domCreate().listener();
 new productInfo().feel();
+
+class Button extends UI {
+  constructor(button) {
+    super();
+    button = document.querySelector("#checkButton");
+    this.button = button;
+  };
+  print() {
+    console.log(this.button.length);
+  };
+  list() {
+    this.button.addEventListener("click", this.print());
+  }
+}
+new Button().list();
