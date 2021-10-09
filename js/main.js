@@ -130,7 +130,7 @@ class Button {
     this.button = itemButton;
     console.log(this.button)
   };
-  list() {
+  subTopic() {
       this.button.forEach((element) => {
         element.addEventListener("click", () => {
             this.topic.push(element.classList.item(1));
@@ -139,4 +139,4 @@ class Button {
       })
     }
   };
-new Button().list();
+new Button().subTopic();
