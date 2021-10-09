@@ -94,7 +94,8 @@ class domCreate extends productInfo {
       cIdButton = document.createElement("div");
       cIdButton.setAttribute("id", "button");
       cClassButton = document.createElement("div");
-      cClassButton.setAttribute("class", "button"+" "+"button"+[i]);
+      cClassButton.setAttribute("id", "itemButton");
+      cClassButton.setAttribute("class", "button" + " " + "button" + [i]);
       cClassButton.innerHTML = "Add to cart";
       this.content.appendChild(cIdContener);
       cIdContener.appendChild(cClassImg);
@@ -122,20 +123,22 @@ class domCreate extends productInfo {
 new domCreate().listener();
 new productInfo().feel();
 
-class Button extends UI {
-  constructor(cartbutton) {
-    super();
+class Button {
+  constructor(itemButton) {
     this.topic = [];
-    cartbutton = document.querySelectorAll(".button");
-    this.button = cartbutton;
+    itemButton = document.querySelectorAll("#itemButton");
+    this.button = itemButton;
+    console.log(this.button)
   };
   list() {
-    this.button.forEach(element => {
-      element.addEventListener("click", () => {
-        this.topic.push(('button').attr('class').split(' ')[1]);
-        console.log(this.topic);
+    for (let i = 0; i < this.button.length; i++) {
+      this.button.forEach(element => {
+        element.addEventListener("click", () => {
+          this.topic.push(this.button[i].classList.item(1));
+          console.log(this.topic);
+        })
       })
-    })
+    }
   };
 };
 new Button().list();
