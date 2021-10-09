@@ -131,14 +131,12 @@ class Button {
     console.log(this.button)
   };
   list() {
-    for (let i = 0; i < this.button.length; i++) {
-      this.button.forEach(element => {
+      this.button.forEach((element) => {
         element.addEventListener("click", () => {
-          this.topic.push(this.button[i].classList.item(1));
-          console.log(this.topic);
+            this.topic.push(element.classList.item(1));
+            console.log(this.topic);
         })
       })
     }
   };
-};
 new Button().list();
