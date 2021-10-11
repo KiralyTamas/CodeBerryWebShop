@@ -133,8 +133,10 @@ class Button {
   subTopic() {
       this.button.forEach((element) => {
         element.addEventListener("click", () => {
+          if (!this.topic.element) {
             this.topic.push(element.classList.item(1));
             console.log(this.topic);
+          }
         })
       })
     }
