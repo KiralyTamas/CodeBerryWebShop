@@ -138,7 +138,7 @@ class domCreate extends productInfo {
 new domCreate().listener();
 new productInfo().feel();
 
-class Button extends UI {
+class PubSub extends UI {
   constructor(itemButton) {
     super();
     this.topic = [];
@@ -173,4 +173,4 @@ class Button extends UI {
     });
   }
 }
-new Button().subTopic();
+new PubSub().subTopic();
