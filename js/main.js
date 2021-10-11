@@ -1,7 +1,11 @@
 "use strict";
 class UI {
   constructor(
+    domCartCopy,
     domCartContent,
+    domCartData,
+    domCartItemName,
+    domCartItemPrize,
     domContent,
     domContener,
     domImg,
@@ -10,7 +14,11 @@ class UI {
     domDescription,
     domPrize
   ) {
+    domCartCopy = document.querySelector("#cartCopy");
     domCartContent = document.querySelector(".cartContent");
+    domCartData = document.querySelectorAll("#cartData");
+    domCartItemName = document.querySelectorAll(".itemName");
+    domCartItemPrize = document.querySelectorAll(".itemPrize");
     domContent = document.querySelector("#content");
     domContener = document.querySelectorAll("#contener");
     domImg = document.querySelectorAll(".picture");
@@ -18,7 +26,11 @@ class UI {
     domAltCim = document.querySelectorAll(".altName");
     domDescription = document.querySelectorAll(".description");
     domPrize = document.querySelectorAll(".prize");
+    this.cartCopy = domCartCopy;
     this.cartContent = domCartContent;
+    this.cartData = domCartData;
+    this.itemName = domCartItemName;
+    this.itemPrize = domCartItemPrize;
     this.content = domContent;
     this.contener = domContener;
     this.kep = domImg;
@@ -95,7 +107,7 @@ class domCreate extends productInfo {
       cIdButton.setAttribute("id", "button");
       cClassButton = document.createElement("div");
       cClassButton.setAttribute("id", "itemButton");
-      cClassButton.setAttribute("class", "button" + " " + "button" + [i]);
+      cClassButton.setAttribute("class", "button" + " " + "button" + [i]+" "+[i]);
       cClassButton.innerHTML = "Add to cart";
       this.content.appendChild(cIdContener);
       cIdContener.appendChild(cClassImg);
@@ -123,22 +135,36 @@ class domCreate extends productInfo {
 new domCreate().listener();
 new productInfo().feel();
 
-class Button {
+class Button extends UI {
   constructor(itemButton) {
+    super();
     this.topic = [];
     itemButton = document.querySelectorAll("#itemButton");
     this.button = itemButton;
-    console.log(this.button)
-  };
-  subTopic() {
-      this.button.forEach((element) => {
-        element.addEventListener("click", () => {
-          if (!this.topic.element) {
-            this.topic.push(element.classList.item(1));
-            console.log(this.topic);
-          }
-        })
-      })
+  }
+  pubTopic() {
+    for (let i = 0; i < this.topic.length; i++) {
+      this.cCartData = document.createElement("div");
+      this.cCartData.setAttribute("id", "cartData");
+      this.cCartItemName = document.createElement("h3");
+      this.cCartItemName.setAttribute("class", "itemName");
+      this.cCartItemPrize = document.createElement("h3");
+      this.cCartItemPrize.setAttribute("class", "itemPrize");
+      this.cartCopy.appendChild(this.cCartData);
+      this.cCartData.appendChild(this.cCartItemName);
+      this.cCartData.appendChild(this.cCartItemPrize);
     }
-  };
+  }
+  subTopic() {
+    this.button.forEach((element) => {
+      element.addEventListener("click", () => {
+        this.topic.buyItem=[];
+        this.topic.buyItem.push(this.cim[element.classList.item(2)].innerHTML);
+
+        console.log(this.topic.buyItem);
+        this.pubTopic();
+      });
+    });
+  }
+}
 new Button().subTopic();

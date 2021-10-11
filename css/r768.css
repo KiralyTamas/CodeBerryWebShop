@@ -2,7 +2,7 @@
   #cartContent {
     position: absolute;
     right: 5px;
-    top: 80px;
+    top: 8vh;
     transition: 1000ms;
     width: 16vw;
     height: auto;
