@@ -107,7 +107,10 @@ class domCreate extends productInfo {
       cIdButton.setAttribute("id", "button");
       cClassButton = document.createElement("div");
       cClassButton.setAttribute("id", "itemButton");
-      cClassButton.setAttribute("class", "button" + " " + "button" + [i]+" "+[i]);
+      cClassButton.setAttribute(
+        "class",
+        "button" + " " + "button" + [i] + " " + [i]
+      );
       cClassButton.innerHTML = "Add to cart";
       this.content.appendChild(cIdContener);
       cIdContener.appendChild(cClassImg);
@@ -143,7 +146,7 @@ class Button extends UI {
     this.button = itemButton;
   }
   pubTopic() {
-    for (let i = 0; i < this.topic.length; i++) {
+    for (let i = 0; i < this.topic.itemName.length; i++) {
       this.cCartData = document.createElement("div");
       this.cCartData.setAttribute("id", "cartData");
       this.cCartItemName = document.createElement("h3");
@@ -153,15 +156,18 @@ class Button extends UI {
       this.cartCopy.appendChild(this.cCartData);
       this.cCartData.appendChild(this.cCartItemName);
       this.cCartData.appendChild(this.cCartItemPrize);
+      this.cCartItemName.innerHTML = this.topic.itemName[i];
+      this.cCartItemPrize.innerHTML = this.topic.itemPrize[i];
     }
   }
   subTopic() {
     this.button.forEach((element) => {
       element.addEventListener("click", () => {
-        this.topic.buyItem=[];
-        this.topic.buyItem.push(this.cim[element.classList.item(2)].innerHTML);
-
-        console.log(this.topic.buyItem);
+        this.topic.itemName = [];
+        this.topic.itemPrize = [];
+        this.topic.itemName.push(this.cim[element.classList.item(2)].innerHTML);
+        this.topic.itemPrize.push(this.prize[element.classList.item(2)].innerHTML);
+        console.log(this.topic)
         this.pubTopic();
       });
     });
