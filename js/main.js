@@ -1,6 +1,7 @@
 "use strict";
 class UI {
   constructor(
+    domCartHead,
     domCartCopy,
     domCartContent,
     domCartData,
@@ -14,6 +15,7 @@ class UI {
     domDescription,
     domPrize
   ) {
+    domCartHead = document.querySelector("#cartHead");
     domCartCopy = document.querySelector("#cartCopy");
     domCartContent = document.querySelector(".cartContent");
     domCartData = document.querySelectorAll("#cartData");
@@ -26,6 +28,7 @@ class UI {
     domAltCim = document.querySelectorAll(".altName");
     domDescription = document.querySelectorAll(".description");
     domPrize = document.querySelectorAll(".prize");
+    this.cartHead = domCartHead;
     this.cartCopy = domCartCopy;
     this.cartContent = domCartContent;
     this.cartData = domCartData;
@@ -132,17 +135,19 @@ class domCreate extends productInfo {
     }
   }
   listener() {
-    this.cartContent.addEventListener("click", () => this.start());
+    this.cartHead.addEventListener("click", () => this.start());
   }
 }
 new domCreate().listener();
 new productInfo().feel();
 
 class PubSub extends UI {
-  constructor(itemButton) {
+  constructor(itemButton, domItemRemove) {
     super();
     this.topic = [];
+    domItemRemove = document.querySelectorAll("#itemRemove");
     itemButton = document.querySelectorAll("#itemButton");
+    this.itemRemove = domItemRemove;
     this.button = itemButton;
   }
   pubTopic() {
@@ -153,11 +158,15 @@ class PubSub extends UI {
       this.cCartItemName.setAttribute("class", "itemName");
       this.cCartItemPrize = document.createElement("h3");
       this.cCartItemPrize.setAttribute("class", "itemPrize");
+      this.cItemRemove = document.createElement("div");
+      this.cItemRemove.setAttribute("id", "itemRemove");
       this.cartCopy.appendChild(this.cCartData);
       this.cCartData.appendChild(this.cCartItemName);
       this.cCartData.appendChild(this.cCartItemPrize);
+      this.cCartData.appendChild(this.cItemRemove);
       this.cCartItemName.innerHTML = this.topic.itemName[i];
       this.cCartItemPrize.innerHTML = this.topic.itemPrize[i];
+      this.cItemRemove.innerHTML = "Remove";
     }
   }
   subTopic() {
@@ -166,11 +175,22 @@ class PubSub extends UI {
         this.topic.itemName = [];
         this.topic.itemPrize = [];
         this.topic.itemName.push(this.cim[element.classList.item(2)].innerHTML);
-        this.topic.itemPrize.push(this.prize[element.classList.item(2)].innerHTML);
-        console.log(this.topic)
+        this.topic.itemPrize.push(
+          this.prize[element.classList.item(2)].innerHTML
+        );
+        console.log(this.topic);
+        console.log(this.itemRemove.length);
         this.pubTopic();
+      });
+    });
+  }
+  remove() {
+    this.itemRemove.forEach((element) => {
+      element.addEventListener("click", () => {
+        console.log(this.itemRemove);
       });
     });
   }
 }
 new PubSub().subTopic();
+new PubSub().remove();

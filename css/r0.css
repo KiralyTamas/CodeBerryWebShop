@@ -82,6 +82,7 @@
     width: 100%;
     font-size: 1.2rem;
     margin-left: 1rem;
+    cursor:default;
   }
   #cartData {
     display: flex;
@@ -90,9 +91,24 @@
     align-items: center;
     margin-bottom: 1.5rem;
   }
+  #itemRemove {
+    display: inline;
+    position: absolute;
+    float: left;
+    margin: auto;
+    top: 2vh;
+    width: 50%;
+    text-align: center;
+    cursor: pointer;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.241);
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
   .itemName,
   .itemPrize {
     margin: auto;
+    max-width: 50%;
   }
   #checkButton {
     display: block;
@@ -102,6 +118,7 @@
     margin-bottom: 1.5rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    cursor: pointer;
   }
   #checkButton h3 {
     margin: 10px 20px 10px 20px;
@@ -177,6 +194,7 @@
   .button {
     font-size: 1rem;
     margin: 1.5rem;
+    cursor: pointer;
     background-color: rgb(172, 240, 105);
     padding: 10px 20px;
     border-radius: 5px;

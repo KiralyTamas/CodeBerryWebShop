@@ -1,8 +1,8 @@
 @media (min-width: 768px) {
-  #cartContent {
+  .cartContent {
     position: absolute;
     right: 5px;
-    top: 8vh;
+    top: 6vh;
     transition: 1000ms;
     width: 16vw;
     height: auto;
